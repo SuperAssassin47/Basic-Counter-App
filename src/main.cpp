@@ -51,21 +51,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		{
 			counter++; // increase counter by 1
 			InvalidateRect(hWnd, NULL, TRUE); // update UI with new value
-			break; // execute the INNER switch
+			break; // exit the INNER switch
 		}
 
 		case IDC_DECREMENT:
 		{
 			counter--; // decrease counter by 1
 			InvalidateRect(hWnd, NULL, TRUE); // update UI with new value
-			break; // execute the INNER switch
+			break; // exit the INNER switch
 		}
 		
 		case IDC_RESET:
 		{
-			counter = 0;
-			InvalidateRect(hWnd, NULL, TRUE);
-			break;
+			counter = 0; // reset counter to 0
+			InvalidateRect(hWnd, NULL, TRUE); // update UI with new value
+			break; // exit the INNER switch
 		}
 		}
 
